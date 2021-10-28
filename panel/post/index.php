@@ -28,7 +28,7 @@ require_once '../../functions/pdo_connection.php';
 
                     <section class="mb-2 d-flex justify-content-between align-items-center">
                         <h2 class="h4">Articles</h2>
-                        <a href="create.php" class="btn btn-sm btn-success">Create</a>
+                        <a href="<?= url('panel/post/create.php') ?>" class="btn btn-sm btn-success">Create</a>
                     </section>
 
                     <section class="table-responsive">
@@ -56,7 +56,7 @@ require_once '../../functions/pdo_connection.php';
                                     <tr>
                                         <td><?= $post->id ?></td>
                                         <td>
-                                            <img style="width: 90px;" src="">
+                                            <img style="width: 90px;" src="<?= asset("$post->image") ?>">
                                         </td>
                                         <td><?= $post->title ?></td>
                                         <td><?= $post->category_name ?></td>
